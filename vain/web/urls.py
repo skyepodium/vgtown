@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from web.main_page.views import main_page
+
 urlpatterns = [
-    url(r'^', main_page),
+    url(r'^$', main_page),
 ]

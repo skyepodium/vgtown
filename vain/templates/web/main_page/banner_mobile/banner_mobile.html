@@ -1,0 +1,31 @@
+    <!-- 배너 모바일 -->
+    <div class="banner_mobile">
+        <div class="banner_mobile-wrapper">
+          <!-- 배너 모바일 슬라이드 장고 반복문 부분-->
+          {% for banner in banners %}
+          <div class="banner_mobile-slide" style="background-image:url({{ banner.image.url }})">{{banner.id}}</div>
+          {% endfor %}
+
+          </div>
+        <!-- 배너 모바일 페이지네이션 동그라미 -->
+        <div class="banner_mobile-pagination"></div>
+    </div>
+
+<!-- 배너 모바일 javascript -->
+<script src="/assets/web/js/main_page/banner_mobile/banner_mobile_swiper.js"></script>
+
+<script>
+//------------------------------------------------------------------------------
+//PURPOSE : 배너 모바일의 api, 배너 모바일의 속성을 정의한다.
+//CREATE  : 2017-03-07 김정윤
+//MODIFY  :
+//------------------------------------------------------------------------------
+  var banner_mobile = new banner_mobile('.banner_mobile', {
+    pagination: '.banner_mobile-pagination',
+    paginationClickable: true,
+    autoplay:3000,
+    loop:true,
+    autoplayDisableOnInteraction:false,
+    speed:600,
+  });
+</script>

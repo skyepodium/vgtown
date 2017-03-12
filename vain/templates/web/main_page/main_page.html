@@ -10,10 +10,47 @@
     <script type="text/javascript" src="/assets/web/jquery/jquery-1.12.0.min.js"></script>
 
     <link href="/assets/web/css/nav/nav_level1.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/web/css/main_page/banner_mobile/banner_mobile_swiper.css" rel="stylesheet" type="text/css"/>
+
+    <!--7 페이지별 스타일시트-->
+    <style>
+    /*------------------------------------------------------------------------------*/
+    /*PURPOSE : 홈에서 list_navigation_under의 홈 색깔을 변경하여 현재 위치 표시*/
+    /*CREATE  : 2017-03-03 김정윤*/
+    /*MODIFY  : */
+    /*------------------------------------------------------------------------------*/
+      #menu-link1{
+        color:#ec5629;
+        font-weight:600;
+      }
+
+    /*------------------------------------------------------------------------------*/
+    /*PURPOSE : 사이드 메뉴 실행시 사이드 메뉴 아래 화면 고정(페이지의 네비게이션 레벨에 따라 상이하게 설정)*/
+    /*CREATE  : 2017-03-03 김정윤*/
+    /*MODIFY  : */
+    /*------------------------------------------------------------------------------*/
+    .nav_sidefixed{
+      position:fixed;
+      top:0px;
+    }
+    .list_navigation_under_sidefixed{
+      position:fixed;
+      top:59px;
+    }
+    .section_sidefixed{
+      position:fixed;
+      top:107px;
+    }
+    </style>
+
 
   </head>
   <body>
     {% include 'web/nav/nav_level1.html' %}
 
+    <section class="section">
+      {% include 'web/main_page/banner_mobile/banner_mobile.html' %}
+
+    </section>
   </body>
 </html>
