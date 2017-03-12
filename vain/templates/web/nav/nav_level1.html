@@ -1,3 +1,145 @@
-<nav>
-  
+<!--네비게이션 레벨1 인클루드-->
+<nav class="nav">
+  <div id="side_menu_block">
+    <div id="side_menu_box">
+      <img class="side_menu_image" alt="side_menu" src="/assets/web/image/nav/side_menu_image.png"/>
+    </div>
+  </div>
+
+  <a id="logo" href="http://www.vgtown.com">
+    <img class ="logo_image" alt="logo_image" src="/assets/web/image/nav/vain_logo.png"/>
+  </a>
+
+  <div id="search_mobile_block">
+    <div id="search_mobile">
+      <img class="search_mobile_image" alt="search_mobile_image" src="/assets/web/image/nav/search_mobile_image.png"/>
+    </div>
+  </div>
+
+  <div id="list_navigation">
+    <ul>
+      <li><a class="menu-link" href="http://www.potenup.com">홈</a></li>
+      <li><a class="menu-link" href="http://www.potenup.com/category">추천</a></li>
+      <li><a class="menu-link" href="http://www.potenup.com/category">카테고리</a></li>
+      <li><a class="menu-link" href="http://www.potenup.com/tag">태그</a></li>
+      <li><a class="menu-link" href="http://www.potenup.com/magazine">매거진</a></li>
+    </ul>
+  </div>
+
+  <div id="search_pc">
+  </div>
+
+  <div id="auth">
+  </div>
 </nav>
+
+<script>
+//------------------------------------------------------------------------------
+//PURPOSE : 사이드 메뉴 오픈시 클래스 추가를 통해 #side_menu, .page_cover를 제외한 nav, list_navigation_under, section 고정
+//CREATE  : 2017-03-03 김정윤
+//MODIFY  :
+//------------------------------------------------------------------------------
+  $("#side_menu_box").click(function() {
+  $("#side_menu,.page_cover,html").addClass("open");
+  $( '.nav' ).addClass( 'nav_sidefixed' );
+  $( '.list_navigation_under' ).addClass( 'list_navigation_under_sidefixed' );
+  $( '.section' ).addClass( 'section_sidefixed' );
+  window.location.hash = "#open";
+  });
+
+  window.onhashchange = function() {
+  if (location.hash != "#open") {
+    $("#side_menu,.page_cover,html").removeClass("open");
+    $( '.nav' ).removeClass( 'nav_sidefixed' );
+    $( '.list_navigation_under' ).removeClass( 'list_navigation_under_sidefixed' );
+    $( '.section' ).removeClass( 'section_sidefixed' );
+  }
+  };
+</script>
+
+<!-- .page_cover, #side_menu는 nav, section, footer 어디에도 속하지 않는 돔이다.-->
+<div onclick="history.back();" class="page_cover">
+</div>
+
+<div id="side_menu">
+  <div id="profile">
+    <img id="noprofile_image" src="/assets/web/image/nav/noprofile.png"/>
+    <a href="http://www.potenup.com/accounts/login" id="profile_login_btn">
+      로그인하세요
+    </a>
+    <div onclick="history.back();" class="close">
+    </div>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="http://www.potenup.com">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+  <div id="list_navigation_side_menu">
+    <ul>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">추천</a></li>
+      <li><a href="#">카테고리</a></li>
+      <li><a href="#">태그</a></li>
+      <li><a href="#">매거진</a></li>
+    </ul>
+  </div>
+</div>
