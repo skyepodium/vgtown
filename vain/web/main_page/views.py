@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests
 from vain.banner.models import BannerModel
-
+from django.http import HttpResponse
 #key = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODFkMDdkMC1lOTEzLTAxMzQtOWY1Yy0wMjQyYWMxMTAwMGIiLCJpc3MiOiJnYW1lbG9ja2VyIiwib3JnIjoic2t5ZXBvZGl1bS1nbWFpbC1jb20iLCJhcHAiOiIwODFiNTI4MC1lOTEzLTAxMzQtOWY1Yi0wMjQyYWMxMTAwMGIiLCJwdWIiOiJzZW1jIiwidGl0bGUiOiJ2YWluZ2xvcnkiLCJzY29wZSI6ImNvbW11bml0eSIsImxpbWl0IjoxMH0.jbBOxLbhaGaE4nB4YRNXm5ghpObWynuHNX2kIxx0ruA'
 
 def main_page(request):
@@ -12,8 +12,7 @@ def main_page(request):
     })
 
 
-'''
-def main_page(request):
+def api(request):
 #    url = "https://api.dc01.gamelockerapp.com/shards/ea/matches?sort=-createdAt"
     url = "https://api.dc01.gamelockerapp.com/shards/ea/players?filter[playerNames]=haruholic"
 
@@ -27,4 +26,3 @@ def main_page(request):
     r = requests.get(url, headers=header)
 
     return HttpResponse(r)
-'''

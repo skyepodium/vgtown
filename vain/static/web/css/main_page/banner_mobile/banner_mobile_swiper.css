@@ -12,6 +12,18 @@
  *
  * Released on: December 13, 2016
  */
+ .banner_mobile-pagination{
+   position:absolute;
+   top:0;
+   right:0;
+ }
+ .banner_title{
+   width:100%;
+   height:30px;
+   position:absolute;
+   bottom:0;
+   color:#fff;
+ }
  .banner_mobile{
    width:100%;
    height:38.9vw;
@@ -222,9 +234,9 @@
 .banner_mobile-pagination-fraction,
 .banner_mobile-pagination-custom,
 .banner_mobile-horizontal > .banner_mobile-pagination-bullets {
-  bottom: 10px;
-  left: 0;
-  width: 100%;
+  /*bottom: 10px;*/
+  /*left: 0;*/
+  /*width: 100%;*/
 }
 /* Bullets */
 .banner_mobile-pagination-bullet {

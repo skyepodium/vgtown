@@ -3,7 +3,7 @@
         <div class="banner_mobile-wrapper">
           <!-- 배너 모바일 슬라이드 장고 반복문 부분-->
           {% for banner in banners %}
-          <div class="banner_mobile-slide" style="background-image:url({{ banner.image.url }})">{{banner.id}}</div>
+          <div class="banner_mobile-slide" style="background-image:url({{ banner.image.url }})"><div class="banner_title">{{banner.title}}</div></div>
           {% endfor %}
 
           </div>
