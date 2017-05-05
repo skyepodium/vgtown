@@ -17,6 +17,7 @@ from django.conf.urls import url
 from web.main_page.views import main_page, api
 
 urlpatterns = [
+#
     url(r'^$', main_page),
     url(r'^api$',api),
 ]
